@@ -1,4 +1,4 @@
-france_map
+France map
 ==========
 
-SVG France map
+SVG France map using d3
