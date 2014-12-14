@@ -1,26 +1,24 @@
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-	box-sizing: inherit;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
-	margin: 0;
-	color: #000;
-	background: #fff;
-	font: 12px/1.2 Arial, Helvetica, sans-serif;
-	min-width: 320px;
-	overflow-y: scroll;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: none;
+  margin: 0;
+  color: #000;
+  background: #fff;
+  font: 12px/1.2 Arial, Helvetica, sans-serif;
+  min-width: 320px;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
 }
 
 * {
-	max-height: 1000000px;
+  max-height: 1000000px;
 }
 
 article,
@@ -35,55 +33,54 @@ main,
 nav,
 section,
 summary {
-	display: block;
+  display: block;
 }
 
 img {
-	border-style: none;
+  border-style: none;
 }
 
 a {
-	text-decoration: none;
-	color: #666;
+  text-decoration: none;
+  color: #666;
 }
-
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 input,
 textarea,
 select {
-	font: 100% Arial, Helvetica, sans-serif;
-	color: #000;
-	vertical-align: middle;
+  font: 100% Arial, Helvetica, sans-serif;
+  color: #000;
+  vertical-align: middle;
 }
 
 form,
 fieldset {
-	margin: 0;
-	padding: 0;
-	border-style: none;
+  margin: 0;
+  padding: 0;
+  border-style: none;
 }
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
-	*overflow: visible;
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
 }
 
 input[type="submit"]:hover,
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 input[type="text"],
@@ -93,11 +90,10 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	margin: 0;
-	padding: 4px 7px;
-	border: 1px solid #999;
+  margin: 0;
+  padding: 4px 7px;
+  border: 1px solid #999;
 }
-
 input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus,
@@ -105,93 +101,107 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border-color: #4d4d4d;
+  border-color: #4d4d4d;
 }
 
 textarea {
-	overflow: auto;
-	resize: vertical;
-	vertical-align: top;
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-	padding: 0;
+  padding: 0;
 }
 
 input[type="search"] {
-	-webkit-appearance: textfield;
-	box-sizing: content-box;
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 1.2em;
-	margin: 0 0 1.2em;
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2em;
+  margin: 0 0 1.2em;
 }
 
 p {
-	margin: 0 0 1.2em;
+  margin: 0 0 1.2em;
 }
 
 q {
-	quotes: none;
+  quotes: none;
 }
-
-q:before,
-q:after {
-	content: "";
-	content: none;
+q:before, q:after {
+  content: '';
+  content: none;
 }
 
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-	top: -.5em;
+  top: -0.5em;
 }
 
 sub {
-	bottom: -.25em;
+  bottom: -0.25em;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 html {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	min-height: 100%;
-	background: #c0c0c0;
-	position: relative;
+  height: 100%;
+  background: #C0C0C0;
+  position: relative;
 }
 
 img {
-	display: block;
-	width: 100%;
-	height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 #wrapper {
-	overflow: hidden;
+  overflow: hidden;
+  height: 100%;
+  text-align: center;
 }
-
+
+.map {
+  width: 80%;
+  height: 80%;
+  vertical-align: middle;
+}
+
+#wrapper:after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.area {
+  stroke: #eee;
+  fill: #4ea1d9;
+}
+
+/*# sourceMappingURL=all.css.map */
