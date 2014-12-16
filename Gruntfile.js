@@ -18,18 +18,10 @@ module.exports = function(grunt){
 			}
 		},
 		clean: ['.sass-cache', 'css/**/*.map'],
-		express: {
-			all:{
-				options:{
-					port: 9000,
-					bases: '.',
-					livereload: true
-				}
-			}
-		},
 		watch: {
 			options: {
-				livereload: true
+				debounceDelay: 1,
+				// livereload: true
 			},
 			styles: {
 				files: 'scss/**/*.scss',
@@ -38,8 +30,23 @@ module.exports = function(grunt){
 					spawn: false
 				}
 			}
-		}
+		},
+		browserSync: {
+      dev: {
+        bsFiles: {
+          src : ['**/*.html','css/**/*.css', '*.css']
+        },
+        options: {
+          server: {
+            baseDir: "./",
+            index: "index.html",
+            directory: true
+          },
+          watchTask: true
+        }
+      }
+    },
 	});
 
-	grunt.registerTask('default', ['express', 'watch']);
+	grunt.registerTask('default', ['sass:dev', 'browserSync', 'watch']);
 };

@@ -7,12 +7,9 @@ function initMap(){
 	// get svg element
 	d3.selectAll('.map').each(function(d, index){
 		var map = d3.select(this),
-			width = parseInt(map.style('width')),
-			height = parseInt(map.style('height')),
 			projection = d3.geo.mercator(),
 			path = d3.geo.path().projection(projection),
-			mapBounds,
-			timer;
+			mapBounds;
 
 
 		//load data from json
@@ -45,10 +42,9 @@ function initMap(){
 		}
 
 		function resizeMap(){
-			var scale, translate;
-
-			width = parseInt(map.style('width'));
-			height = parseInt(map.style('height'));
+			var width = parseInt(map.style('width')),
+				height = parseInt(map.style('height')),
+				scale, translate;
 
 			scale = 1 / Math.max((mapBounds[1][0] - mapBounds[0][0]) / width, (mapBounds[1][1] - mapBounds[0][1]) / height);
 			translate = [(width - scale * (mapBounds[1][0] + mapBounds[0][0])) / 2, (height - scale * (mapBounds[1][1] + mapBounds[0][1])) / 2];
@@ -61,10 +57,7 @@ function initMap(){
 		}
 
 		function resizeHandler(){
-			if (timer) clearTimeout(timer);
-			timer = setTimeout(function(){
-				resizeMap();
-			}, 100);
+			resizeMap();
 		}
 
 		function attachEvents(){
